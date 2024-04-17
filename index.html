@@ -9,7 +9,15 @@
             margin: 0;
             border: 0;
             padding: 0;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .flex{ 
+            display: flex;
+        }
+
+        .just-spc-btwn{
+            justify-content: space-between;
         }
 
         .navbar-do-header{
@@ -17,22 +25,15 @@
             background-color: black;
         }
         
-        .container-do-header{
-            display: flex;
+        .navbar-do-header .container-do-header{
             height: 100%;
             margin-left: 15%;
             margin-right: 15%;
-            justify-content: space-between;
         }   
 
-        .logo-do-header {
-            align-content: center;
-        }
-        
         .container-do-header ul{
             justify-content: center;
             width: 50%;
-            display: flex;
             align-items: center;
             gap: 25px;
         }
@@ -47,50 +48,91 @@
             color: white;
         }
 
-        .container-bem-vindo{
-            height: 450px;
-        }
-
-        .container-img-biblioteca{ 
+        .container-main-1{ 
             background-image: 
                 linear-gradient(rgba(0, 0, 0, 0.6), 
                 rgba(0, 0, 0, 0.6)), 
                 url(imgs/imagem\ biblioteca.jpg); 
             background-size: cover; 
             background-position: center center; 
-            height: 100%;
+            height: 450px;
         }
 
-        .informacoes-img-biblioteca{
+        .informacoes-bem-vindo{
             padding-top: 200px;
-            width: 400px;
-            padding-left: 100px ;
+            height: 200px;
+            width: 550px;
+            padding-left: 150px ;
             color: #e7eaf6;
         }
 
-        .informacoes-img-biblioteca p{
-            margin-top: 5px;
+        .informacoes-bem-vindo p{
+            margin-top: 15px;
             margin-bottom: 30px;
+            font-size: 15px;
         }
 
-        .informacoes-img-biblioteca a{
-            list-style-type: none; 
+        .informacoes-bem-vindo a{
             text-decoration: none; 
             color: #e7eaf6;
             background-color: #f95959;
-            padding: 5px;
-            border-radius: 5px;
+            padding: 10px 20px 10px 20px;
+            border-radius: 7px;
         }
-        </style>
+
+
+        .container-main-2{
+            height: 450px;
+            padding: 90px;
+        }
+
+        .container-img-informacoes{
+            width: 1100px;
+            padding: 20px 0 0 60px ;
+            gap: 40px;
+        }
+
+        .container-main-2 .container-img-informacoes img{
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .organizar-informacoes-pq-esc{
+            height: 300px;
+        }
+
+        .organizar-informacoes-pq-esc .container-dos-botoes {
+            margin-top: 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column; /* Empilha os botões verticalmente */
+            gap: 70px; /* Adiciona um espaçamento de 20px entre os botões */  
+        }
+
+        .container-dos-botoes p{
+            color: rgb(107 114 128);
+        }
+        
+        h4{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+
+        .container-main-3{
+            height: 450px;
+        }
+        
+    </style>
 </head>
 <body>
-    <header class="header">
+    <header>
         <nav class="navbar-do-header">
-            <div class="container-do-header">
-                <div class="logo-do-header">
+            <div class="container-do-header flex just-spc-btwn">
+                <div class="logo-do-header" style="align-content: center;">
                     <h1 style="color: white;">EducaLivros</h1>
                 </div>            
-                <ul>
+                <ul class="flex">
                     <li><a href="#">Informações</a></li>
                     <li><a href="#">Biblioteca</a></li>
                     <li><a href="#">Nossos Produtos</a></li>
@@ -100,17 +142,45 @@
         </nav>
     </header>
     <main class="main">
-        <div class="container-bem-vindo">
-            <section class="container-img-biblioteca">
-                <div class="informacoes-img-biblioteca">
-                    <h2>Bem vindo à Educa Livros</h2>
+        <div>
+            <section class="container-main-1">
+                <div class="informacoes-bem-vindo">
+                    <h2 style="font-size: 35px;">Bem vindo à Educa Livros</h2>
                     <p>Descubra um mundo de aprendizado e aventura</p>
                     <a href="#">Explore a Biblioteca</a>
                 </div>
             </section>
         </div>
-        <div class="container-pq-escolher-educalivros">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptate laudantium tempora eligendi consectetur facilis veritatis, ut et. Aspernatur similique facere libero autem dicta adipisci eius itaque eaque assumenda accusamus?</p>
+        <div> 
+            <section class="container-main-2">
+                <div class="container-img-informacoes flex">
+                    <div>
+                        <img src="imgs/imagemCriancaLivros.jpg" alt="img-crianca-livro">
+                    </div>
+                    <div class="organizar-informacoes-pq-esc">
+                        <h2 style="font-size: 30px;">Por que escolher EducaLivros?</h2>
+                        <div class="container-dos-botoes">
+                            <div class="button-1">
+                                <h4>Variedade de Livros</h4>
+                                <p><i>Uma ampla seleção de genêros e títulos para todas as idades.</i></p> 
+                            </div>
+                            <div class="button-2">
+                                <h4>Ambiente de Aprendizado</h4>
+                                <p><i>Espaços dedicados para leitura e estudo.</i></p>
+                            </div>
+                            <div class="button-3">
+                                <h4>E-commerce Integrado</h4>
+                                <p><i>Compre livros e produtos educacionais diretamente do nosso site.</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section class="container-main-3" style="background-color: black;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga asperiores velit quas laboriosam a et libero, aut atque? Corporis ipsum cumque eos repudiandae id consequuntur qui, unde nostrum nam adipisci!</p>
+            </section>
         </div>
     </main>
 </body>
