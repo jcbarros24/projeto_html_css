@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educa Livros</title>
     <style>
-
         *{
             margin: 0;
             border: 0;
@@ -13,48 +12,106 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        .logo-do-header img{
-            width: 200px;
+        .navbar-do-header{
+            height: 60px;
+            background-color: black;
         }
         
         .container-do-header{
             display: flex;
-            justify-content: space-around;
+            height: 100%;
+            margin-left: 15%;
+            margin-right: 15%;
+            justify-content: space-between;
         }   
 
-        .navbar-do-header{
-            width: 600px;
+        .logo-do-header {
+            align-content: center;
         }
-
-        .navbar-do-header ul{
-            width: 100%;
+        
+        .container-do-header ul{
+            justify-content: center;
+            width: 50%;
             display: flex;
-            justify-content: space-around;
-
+            align-items: center;
+            gap: 25px;
         }
-
-        .navbar-do-header li{
+        
+        .container-do-header ul li{
             font-size: 15px;
             list-style-type: none;
         }
+        
+        .container-do-header ul li a{
+            text-decoration: none;
+            color: white;
+        }
 
-    </style>
+        .container-bem-vindo{
+            height: 450px;
+        }
+
+        .container-img-biblioteca{ 
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.6), 
+                rgba(0, 0, 0, 0.6)), 
+                url(imgs/imagem\ biblioteca.jpg); 
+            background-size: cover; 
+            background-position: center center; 
+            height: 100%;
+        }
+
+        .informacoes-img-biblioteca{
+            padding-top: 200px;
+            width: 400px;
+            padding-left: 100px ;
+            color: #e7eaf6;
+        }
+
+        .informacoes-img-biblioteca p{
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        .informacoes-img-biblioteca a{
+            list-style-type: none; 
+            text-decoration: none; 
+            color: #e7eaf6;
+            background-color: #f95959;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        </style>
 </head>
 <body>
     <header class="header">
-        <div class="container-do-header">
-            <div class="logo-do-header">
-                    <img src="imgs/EducaLivrosPNG.png" alt="img-da-logo">
-            </div>            
-            <nav class="navbar-do-header">
+        <nav class="navbar-do-header">
+            <div class="container-do-header">
+                <div class="logo-do-header">
+                    <h1 style="color: white;">EducaLivros</h1>
+                </div>            
                 <ul>
-                    <li>Informações</li>
-                    <li>Livraria on-line</li>
-                    <li>Nossos produtos</li>
-                    <li>Login</li>
+                    <li><a href="#">Informações</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                    <li><a href="#">Nossos Produtos</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div> 
+        </nav>
     </header>
+    <main class="main">
+        <div class="container-bem-vindo">
+            <section class="container-img-biblioteca">
+                <div class="informacoes-img-biblioteca">
+                    <h2>Bem vindo à Educa Livros</h2>
+                    <p>Descubra um mundo de aprendizado e aventura</p>
+                    <a href="#">Explore a Biblioteca</a>
+                </div>
+            </section>
+        </div>
+        <div class="container-pq-escolher-educalivros">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptate laudantium tempora eligendi consectetur facilis veritatis, ut et. Aspernatur similique facere libero autem dicta adipisci eius itaque eaque assumenda accusamus?</p>
+        </div>
+    </main>
 </body>
 </html>
