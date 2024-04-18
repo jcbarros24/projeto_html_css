@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Produtos - Educa Livros</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .produto-container {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px; 
+        }
+        .produto-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .produto-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .produto-titulo {
+            font-size: 20px;
+            color: #333;
+        }
+        .produto-desc {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .produto-preco {
+            font-size: 18px;
+            color: #f95959;
+            font-weight: bold;
+        }
+        .btn-comprar {
+            background-color: #f95959;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Educa Livros - Nossos Produtos</h1>
+        <nav>
+            <a href="index.html" style="color: #fff; margin-right: 20px;">Home</a>
+            <a href="biblioteca.html" style="color: #fff; margin-right: 20px;">Biblioteca</a>
+            <a href="login.html" style="color: #fff;">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h2 style="text-align: center; margin: 20px 0;">Explore Nossos Produtos</h2>
+        <div class="flex">
+            <div class="produto-container" id="produto2">
+                <img src="imgs/Uniforme escolar img.jpg" alt="Uniforme Escolar" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Uniforme Escolar</h3>
+                    <p class="produto-desc">Uniformes confortáveis para o dia a dia escolar.</p>
+                    <span class="produto-preco">R$120,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Uniforme Escolar')">Comprar</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto3">
+                <img src="imgs/img curso de mat.webp" alt="Curso Online" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Curso de Matemática</h3>
+                    <p class="produto-desc">Melhore suas habilidades matemáticas com nosso curso interativo.</p>
+                    <span class="produto-preco">R$200,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Matemática')">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Educa Livros © Todos os Direitos Reservados</p>
+    </footer>
+    <script>
+        function adicionarAoCarrinho(produto) {
+            alert(produto + ' adicionado ao carrinho!');
+        }
+    </script>
+</body>
+</html>
