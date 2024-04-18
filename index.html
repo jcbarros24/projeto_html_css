@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educa Livros</title>
     <style>
+        /* apenas algumas organizações */
         *{
             margin: 0;
             border: 0;
             padding: 0;
-            font-family: Montserrat, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .flex{ 
@@ -20,6 +21,7 @@
             justify-content: space-between;
         }
 
+        /* começa o container do header --> */
         .navbar-do-header{
             height: 60px;
             background-color: black;
@@ -45,9 +47,10 @@
         
         .container-do-header ul li a{
             text-decoration: none;
-            color: white;
+            color: #e7eaf6;
         }
 
+            /* começa o container da biblioteca --> */
         .container-main-1{ 
             background-image: 
                 linear-gradient(rgba(0, 0, 0, 0.6), 
@@ -80,7 +83,7 @@
             border-radius: 7px;
         }
 
-
+        /* começa o container do sobre nós --> */
         .container-main-2{
             height: 450px;
             padding: 90px;
@@ -113,14 +116,54 @@
             color: rgb(107 114 128);
         }
         
-        h4{
+        h3{
             font-size: 20px;
             margin-bottom: 5px;
         }
 
-
+        /* começa o container das perguntas --> */
         .container-main-3{
             height: 450px;
+            background-color: black;
+            padding: 50px 20px 50px 20px;
+        }
+
+        .container-main-3 h2{
+            color: #e7eaf6;
+            font-size: 40px;
+            margin: 0 32% 30px 32%;
+        }
+
+        .container-das-perguntas{
+            margin: 0 30% 0 30%;
+        }
+
+
+        .perguntas-padding{
+            padding: 25px 0 25px 0;
+            gap: 10px;
+        }
+
+        .perguntas-padding img{
+            width: 25px;
+
+        }
+
+        .container-das-perguntas h3{ 
+            color: #f95959;
+            margin-bottom: 10px;
+        }
+
+        .container-das-perguntas p{
+            color: rgb(107 114 128);
+        }
+
+        /* começa o container do footer --> */
+        
+        .container-main-4{ 
+            background-color: white;
+            height: 300px;
+            padding: 40px;
         }
         
     </style>
@@ -130,7 +173,7 @@
         <nav class="navbar-do-header">
             <div class="container-do-header flex just-spc-btwn">
                 <div class="logo-do-header" style="align-content: center;">
-                    <h1 style="color: white;">EducaLivros</h1>
+                    <h1 style="color:#e7eaf6;">EducaLivros</h1>
                 </div>            
                 <ul class="flex">
                     <li><a href="#">Informações</a></li>
@@ -161,15 +204,15 @@
                         <h2 style="font-size: 30px;">Por que escolher EducaLivros?</h2>
                         <div class="container-dos-botoes">
                             <div class="button-1">
-                                <h4>Variedade de Livros</h4>
+                                <h3>Variedade de Livros</h3>
                                 <p><i>Uma ampla seleção de genêros e títulos para todas as idades.</i></p> 
                             </div>
                             <div class="button-2">
-                                <h4>Ambiente de Aprendizado</h4>
+                                <h3>Ambiente de Aprendizado</h3>
                                 <p><i>Espaços dedicados para leitura e estudo.</i></p>
                             </div>
                             <div class="button-3">
-                                <h4>E-commerce Integrado</h4>
+                                <h3>E-commerce Integrado</h3>
                                 <p><i>Compre livros e produtos educacionais diretamente do nosso site.</i></p>
                             </div>
                         </div>
@@ -178,10 +221,60 @@
             </section>
         </div>
         <div>
-            <section class="container-main-3" style="background-color: black;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga asperiores velit quas laboriosam a et libero, aut atque? Corporis ipsum cumque eos repudiandae id consequuntur qui, unde nostrum nam adipisci!</p>
+            <section class="container-main-3">
+                <div class="container-perguntas-frequentes">
+                    <h2>Perguntas Frequentes</h2>
+                </div>
+                <div class="container-das-perguntas">
+                    <div class="perguntas-padding flex">
+                        <div>
+                            <img src="imgs/sinal-de-interrogacao.png" alt="img-interrogacao">
+                        </div>
+                        <div>
+                            <h3>Como posso me associar?</h3>
+                            <p>Você pode se associar através do nosso site, visitando a seção 'Biblioteca'.</p>
+                        </div>
+                    </div>
+                    <div class="perguntas-padding flex">
+                        <div>
+                            <img src="imgs/sinal-de-interrogacao.png" alt="img-interrogacao">
+                        </div>
+                        <div>
+                            <h3>Os livros estão disponíveis para compra?</h3>
+                            <p>Sim, oferecemos opções de compra e empréstimo de livros.</p>
+                        </div>
+                    </div>
+                    <div class="perguntas-padding flex">
+                        <div>
+                            <img src="imgs/sinal-de-interrogacao.png" alt="img-interrogacao">
+                        </div>
+                        <div>
+                            <h3>Há descontos para instituições de ensino?</h3>
+                            <p>Oferecemos descontos especiais para escolas e instituições educacionais.</p>
+                        </div>
+                    </div>
+                    <div class="perguntas-padding flex">
+                        <div>
+                            <img src="imgs/sinal-de-interrogacao.png" alt="img-interrogacao">
+                        </div>
+                        <div>
+                            <h3>Como posso encontrar o livro que procuro?</h3>
+                            <p>Use nossa função de busca para encontrar rapidamente o que você precisa.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
+    <footer>
+        <div class="container-main-4">
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
