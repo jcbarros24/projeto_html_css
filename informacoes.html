@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações - Educa Livros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+         * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Estilo do cabeçalho */
+    .navbar-do-header {
+        width: 100%; 
+        height: 60px;
+        background-color: black;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 15%; 
+        box-sizing: border-box;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        z-index: 1000; 
+    }
+    .navbar-do-header ul {
+        display: flex;
+        justify-content: center; /* Alinhamento central */
+        align-items: center;
+        gap: 25px;
+    }
+    .navbar-do-header ul li a {
+        text-decoration: none;
+        color: #e7eaf6;
+    }
+
+    
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    h1, h2 {
+        color: black;
+        font-size: 30px; 
+    }
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+    }
+    img {
+        max-width: 80%; 
+        height: auto;
+        display: block;
+        margin: -60px auto 20px; 
+    }
+    .btn-primary {
+        background-color: #f95959;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 7px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+   
+    footer {
+        background-color: black;
+        text-align: center;
+        padding: 40px;
+        color: #333;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar-do-header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="ecommerce.html">Nossos Produtos</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <img src="imgs/crianca-lendo.jpg">
+            <h1>Informações sobre Educa Livros</h1>
+            <p>Explore Educa Livros, sua escola-livraria de confiança para inspirar e educar jovens leitores e aprendizes.</p>
+            <h2>Quem Somos</h2>
+            <p>Na Educa Livros, conectamos crianças e adolescentes com uma variedade enriquecedora de livros e recursos educacionais, promovendo o amor pela leitura e o desenvolvimento contínuo.</p>
+            <h2>Explore Nossos Livros</h2>
+            <p>Navegue por uma seleção curada de literatura infantil, histórias educativas, e biografias que inspiram.</p>
+            <a href="biblioteca.html" class="btn-primary">Visite nossa biblioteca</a>
+            <h2>Veja Nossos Cursos e Produtos Autorais</h2>
+            <p>Descubra cursos interativos e produtos autorais projetados para enriquecer a jornada educacional.</p>
+            <a href="ecommerce.html" class="btn-primary">Conheça nossos produtos e cursos</a>
+        </section>
+    </main>
+    <footer>
+        <p>Educa Livros © Todos os Direitos Reservados</p>
+    </footer>
+</body>
+</html>
