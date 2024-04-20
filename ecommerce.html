@@ -18,7 +18,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+          
         }
         .flex {
             display: flex;
@@ -65,17 +65,74 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
+
+         /* apenas algumas organizações */
+     *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .flex{ 
+            display: flex;
+        }
+
+        .just-spc-btwn{
+            justify-content: space-between;
+        }
+
+        /* começa o container do header --> */
+        .navbar-do-header{
+            height: 60px;
+            background-color: black;
+        }
+        
+        .navbar-do-header .container-do-header{
+            height: 100%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }   
+
+        .container-do-header ul{
+            justify-content: center;
+            width: 50%;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .container-do-header ul li{
+            font-size: 15px;
+            list-style-type: none;
+        }
+        
+        .container-do-header ul li a{
+            text-decoration: none;
+            color: #e7eaf6;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Educa Livros - Nossos Produtos</h1>
-        <nav>
-            <a href="index.html" style="color: #fff; margin-right: 20px;">Home</a>
-            <a href="biblioteca.html" style="color: #fff; margin-right: 20px;">Biblioteca</a>
-            <a href="login.html" style="color: #fff;">Login</a>
+        <nav class="navbar-do-header">
+            <div class="container-do-header flex just-spc-btwn">
+                <div class="logo-do-header" style="align-content: center;">
+                    <h1 style="color:#e7eaf6;">EducaLivros</h1>
+                </div>            
+                <ul class="flex">
+                    <li><a href="informacoes.html">Informações</a></li>
+                    <li><a href="#"><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="ecommerce.html">Nossos Produtos</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+            </div> 
         </nav>
     </header>
+
+    
     <main>
         <h2 style="text-align: center; margin: 20px 0;">Explore Nossos Produtos</h2>
         <div class="flex">
