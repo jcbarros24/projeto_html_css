@@ -13,62 +13,60 @@
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
         }
-
-        body {
+    
+        body{
             background-color: #f4f4f4;
         }
-
-        header,
-        footer {
+    
+        header {
             background-color: #333;
             color: #fff;
             text-align: center;
-
         }
-
+    
         .flex {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             gap: 20px;
         }
-
+    
         .produto-container {
             background: #fff;
             border-radius: 10px;
             padding: 20px;
             width: 300px;
         }
-
+    
         .produto-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
         }
-
+    
         .produto-info {
             text-align: center;
             margin-top: 10px;
         }
-
+    
         .produto-titulo {
             font-size: 20px;
             color: #333;
         }
-
+    
         .produto-desc {
             font-size: 14px;
             color: #666;
             margin: 5px 0;
         }
-
+    
         .produto-preco {
             font-size: 18px;
             color: #f95959;
             font-weight: bold;
         }
-
+    
         .btn-comprar {
             background-color: #f95959;
             color: #fff;
@@ -78,67 +76,19 @@
             cursor: pointer;
             margin-top: 10px;
         }
-
-
-        /* apenas algumas organizações */
-        * {
-            margin: 0;
-            border: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
+    
+        main {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("imgs/Background\ ecommerce.webp");
+            background-size: cover;
+            background-position: center center;
         }
-
-        .flex {
-            display: flex;
-        }
-
-        .just-spc-btwn {
-            justify-content: space-between;
-        }
-
-        /* começa o container do header --> */
-        .navbar-do-header {
-            height: 60px;
-            background-color: black;
-        }
-
-        .navbar-do-header .container-do-header {
-            height: 100%;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-
-        .container-do-header ul {
-            justify-content: center;
-            width: 50%;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .container-do-header ul li {
-            font-size: 15px;
-            list-style-type: none;
-        }
-
-        .container-do-header ul li a {
-            text-decoration: none;
-            color: #e7eaf6;
-        }
-
-        .bg-color1 {
-            background-color: #f95959;
-        }
-
-        .color-1 {
-            color: #f95959;
-        }
-
-        .bg-color2 {
-            background-color: #e7eaf6;
-        }
-
-        .color-2 {
-            color: #e7eaf6;
+    
+        h2 {
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+            font-size: 36px; 
+            margin-top: 20px; 
+            text-align: center; 
         }
     </style>
 </head>
@@ -148,7 +98,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <div>
-                    <a class="navbar-brand" href="#">EducaLivros</a>
+                    <a class="navbar-brand" href="index.html">EducaLivros</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -178,29 +128,103 @@
     <main>
         <h2 style="text-align: center; margin: 20px 0;">Explore Nossos Produtos</h2>
         <div class="flex">
-            <div class="produto-container" id="produto2">
-                <img src="imgs/Uniforme escolar img.jpg" alt="Uniforme Escolar" class="produto-img">
+            <div class="produto-container" id="produto1">
+                <img src="imgs/camisa escolar.jpg" alt="Camisa escolar" class="produto-img">
                 <div class="produto-info">
-                    <h3 class="produto-titulo">Uniforme Escolar</h3>
-                    <p class="produto-desc">Uniformes confortáveis para o dia a dia escolar.</p>
-                    <span class="produto-preco">R$120,00</span>
+                    <h3 class="produto-titulo">Camisa escolar</h3>
+                    <p class="produto-desc">Camisas confortáveis para o dia a dia do seu filho.</p>
+                    <span class="produto-preco">R$40,00</span>
                     <button class="btn-comprar" onclick="adicionarAoCarrinho('Uniforme Escolar')">Comprar</button>
                 </div>
             </div>
-            <div class="produto-container" id="produto3">
-                <img src="imgs/img curso de mat.webp" alt="Curso Online" class="produto-img">
+            <div class="produto-container" id="produto2">
+                <img src="imgs/img curso de mat.webp" alt="Curso de Matematica" class="produto-img">
                 <div class="produto-info">
                     <h3 class="produto-titulo">Curso de Matemática</h3>
                     <p class="produto-desc">Melhore suas habilidades matemáticas com nosso curso interativo.</p>
-                    <span class="produto-preco">R$200,00</span>
-                    <button class="btn-comprar"
-                        onclick="adicionarAoCarrinho('Curso de Matemática')">Inscrever-se</button>
+                    <span class="produto-preco">R$100,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Matemática')">Inscrever-se</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto4">
+                <img src="imgs/calça escolar.png" alt="Calça Escolar" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Calça Escolar</h3>
+                    <p class="produto-desc">Calças confortáveis para o uso diário escolar.</p>
+                    <span class="produto-preco">R$40,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Calça Escolar')">Comprar</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto5">
+                <img src="imgs/capa-programacao.jpg" alt="Curso de Programação" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Curso de Programação para Iniciantes</h3>
+                    <p class="produto-desc">Introdução à programação com foco prático e didático.</p>
+                    <span class="produto-preco">R$60,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Programação')">Inscrever-se</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto6">
+                <img src="imgs/short escolar.jpg" alt="Short Escolar" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Short Escolar</h3>
+                    <p class="produto-desc">Shorts leves e confortáveis para atividades escolares.</p>
+                    <span class="produto-preco">R$40,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Short Escolar')">Comprar</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto7">
+                <img src="imgs/Curso de fisica.jpg" alt="Curso de Física" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Curso de Física</h3>
+                    <p class="produto-desc">Explore os fundamentos da física com abordagens interativas.</p>
+                    <span class="produto-preco">R$100,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Física')">Inscrever-se</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto8">
+                <img src="imgs/Curso de quimica.jpg" alt="Curso de Química" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Curso de Química</h3>
+                    <p class="produto-desc">Aprenda química de forma prática e engajadora.</p>
+                    <span class="produto-preco">R$100,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Química')">Inscrever-se</button>
+                </div>
+            </div>
+            <div class="produto-container" id="produto9">
+                <img src="imgs/Ingresso img.webp" alt="Ingresso para Evento" class="produto-img">
+                <div class="produto-info">
+                    <h3 class="produto-titulo">Ingresso para o Evento de Lançamento de Livros</h3>
+                    <p class="produto-desc">Participe do nosso evento de lançamento e encontre seus autores favoritos.</p>
+                    <span class="produto-preco">R$50,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Ingresso para Evento')">Comprar</button>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <p>Educa Livros © Todos os Direitos Reservados</p>
+        <div class="container">
+            <div class="row py-5 align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="text-muted">© 2024 EducaLivros <br> Promovendo a educação através da leitura.</span>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <img src="imgs/EducaLivrosPNG.png" alt="logo" class="img-fluid" style="max-height: 5rem;">
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                        <li class="nav-item"><a href="informacoes.html" class="nav-link px-2 text-muted">Informações</a>
+                        </li>
+                        <li class="nav-item"><a href="ecommerce.html" class="nav-link px-2 text-muted">E-commerce</a>
+                        </li>
+                        <li class="nav-item"><a href="biblioteca.html" class="nav-link px-2 text-muted">Biblioteca</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
     </footer>
     <script>
         function adicionarAoCarrinho(produto) {
@@ -215,5 +239,4 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
