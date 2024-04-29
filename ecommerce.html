@@ -13,60 +13,60 @@
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
         }
-    
-        body{
+
+        body {
             background-color: #f4f4f4;
         }
-    
+
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
         }
-    
+
         .flex {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             gap: 20px;
         }
-    
+
         .produto-container {
             background: #fff;
             border-radius: 10px;
             padding: 20px;
             width: 300px;
         }
-    
+
         .produto-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
         }
-    
+
         .produto-info {
             text-align: center;
             margin-top: 10px;
         }
-    
+
         .produto-titulo {
             font-size: 20px;
             color: #333;
         }
-    
+
         .produto-desc {
             font-size: 14px;
             color: #666;
             margin: 5px 0;
         }
-    
+
         .produto-preco {
             font-size: 18px;
             color: #f95959;
             font-weight: bold;
         }
-    
+
         .btn-comprar {
             background-color: #f95959;
             color: #fff;
@@ -76,19 +76,21 @@
             cursor: pointer;
             margin-top: 10px;
         }
-    
+
         main {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("imgs/Background\ ecommerce.webp");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imgs/Background ecommerce.webp');
             background-size: cover;
             background-position: center center;
+            margin-top: 0; /* Remover a margem superior para eliminar a borda branca */
         }
-    
-        h2 {
+
+        h2, .section-header {
             color: #fff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
-            font-size: 36px; 
-            margin-top: 20px; 
-            text-align: center; 
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            margin-top: 0; 
         }
     </style>
 </head>
@@ -123,12 +125,11 @@
             </div>
         </nav>
     </header>
-
-
     <main>
-        <h2 style="text-align: center; margin: 20px 0;">Explore Nossos Produtos</h2>
+        <h2 style="text-align: center; margin: 20px 0; font-weight: bold;">Explore Nossos Produtos</h2>
+        <h3 class="section-header">Fardas Escolares</h3>
         <div class="flex">
-            <div class="produto-container" id="produto1">
+            <div class="produto-container">
                 <img src="imgs/camisa escolar.jpg" alt="Camisa escolar" class="produto-img">
                 <div class="produto-info">
                     <h3 class="produto-titulo">Camisa escolar</h3>
@@ -137,16 +138,7 @@
                     <button class="btn-comprar" onclick="adicionarAoCarrinho('Uniforme Escolar')">Comprar</button>
                 </div>
             </div>
-            <div class="produto-container" id="produto2">
-                <img src="imgs/img curso de mat.webp" alt="Curso de Matematica" class="produto-img">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Curso de Matemática</h3>
-                    <p class="produto-desc">Melhore suas habilidades matemáticas com nosso curso interativo.</p>
-                    <span class="produto-preco">R$100,00</span>
-                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Matemática')">Inscrever-se</button>
-                </div>
-            </div>
-            <div class="produto-container" id="produto4">
+            <div class="produto-container">
                 <img src="imgs/calça escolar.png" alt="Calça Escolar" class="produto-img">
                 <div class="produto-info">
                     <h3 class="produto-titulo">Calça Escolar</h3>
@@ -155,16 +147,7 @@
                     <button class="btn-comprar" onclick="adicionarAoCarrinho('Calça Escolar')">Comprar</button>
                 </div>
             </div>
-            <div class="produto-container" id="produto5">
-                <img src="imgs/capa-programacao.jpg" alt="Curso de Programação" class="produto-img">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Curso de Programação para Iniciantes</h3>
-                    <p class="produto-desc">Introdução à programação com foco prático e didático.</p>
-                    <span class="produto-preco">R$60,00</span>
-                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Programação')">Inscrever-se</button>
-                </div>
-            </div>
-            <div class="produto-container" id="produto6">
+            <div class="produto-container">
                 <img src="imgs/short escolar.jpg" alt="Short Escolar" class="produto-img">
                 <div class="produto-info">
                     <h3 class="produto-titulo">Short Escolar</h3>
@@ -173,36 +156,151 @@
                     <button class="btn-comprar" onclick="adicionarAoCarrinho('Short Escolar')">Comprar</button>
                 </div>
             </div>
-            <div class="produto-container" id="produto7">
-                <img src="imgs/Curso de fisica.jpg" alt="Curso de Física" class="produto-img">
+        </div>
+
+        <h3 class="section-header">Cursos Particulares</h3>
+        <div class="flex">
+            <div class="produto-container">
+                <img src="imgs/img curso de mat.webp" alt="Curso de Matematica" class="produto-img">
                 <div class="produto-info">
+                    <h3 class="produto!
+                    -titulo">Curso de Matemática</h3>
+                    <p class="produto-desc">Melhore suas habilidades matemáticas com nosso curso interativo.</p>
+                    <span class="produto-preco">R$100,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Matemática')">Inscrever-se</button>
+                    </div>
+                    </div>
+                    <div class="produto-container">
+                    <img src="imgs/Capa-programacao.jpg" alt="Curso de Programação" class="produto-img">
+                    <div class="produto-info">
+                    <h3 class="produto-titulo">Curso de Programação para Iniciantes</h3>
+                    <p class="produto-desc">Introdução à programação com foco prático e didático.</p>
+                    <span class="produto-preco">R$60,00</span>
+                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Programação')">Inscrever-se</button>
+                    </div>
+                    </div>
+                    <div class="produto-container">
+                    <img src="imgs/Curso de fisica.jpg" alt="Curso de Física" class="produto-img">
+                    <div class="produto-info">
                     <h3 class="produto-titulo">Curso de Física</h3>
                     <p class="produto-desc">Explore os fundamentos da física com abordagens interativas.</p>
                     <span class="produto-preco">R$100,00</span>
                     <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Física')">Inscrever-se</button>
-                </div>
-            </div>
-            <div class="produto-container" id="produto8">
-                <img src="imgs/Curso de quimica.jpg" alt="Curso de Química" class="produto-img">
-                <div class="produto-info">
+                    </div>
+                    </div>
+                    <div class="produto-container">
+                    <img src="imgs/Curso de quimica.jpg" alt="Curso de Química" class="produto-img">
+                    <div class="produto-info">
                     <h3 class="produto-titulo">Curso de Química</h3>
                     <p class="produto-desc">Aprenda química de forma prática e engajadora.</p>
                     <span class="produto-preco">R$100,00</span>
                     <button class="btn-comprar" onclick="adicionarAoCarrinho('Curso de Química')">Inscrever-se</button>
-                </div>
-            </div>
-            <div class="produto-container" id="produto9">
-                <img src="imgs/Ingresso img.webp" alt="Ingresso para Evento" class="produto-img">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Ingresso para o Evento de Lançamento de Livros</h3>
-                    <p class="produto-desc">Participe do nosso evento de lançamento e encontre seus autores favoritos.</p>
-                    <span class="produto-preco">R$50,00</span>
-                    <button class="btn-comprar" onclick="adicionarAoCarrinho('Ingresso para Evento')">Comprar</button>
-                </div>
-            </div>
+                    </div>
+                    </div>
+                    </div>
+                    <h3 class="section-header">Ingressos para Eventos</h3>
+                    <div class="flex">
+                        <div class="produto-container">
+                            <img src="imgs/Ingresso img.webp" alt="Ingresso para Evento" class="produto-img">
+                            <div class="produto-info">
+                                <h3 class="produto-titulo">Ingresso para o Evento de Lançamento de Livros</h3>
+                                <p class="produto-desc">Participe do nosso evento de lançamento e encontre seus autores favoritos.</p>
+                                <span class="produto-preco">R$50,00</span>
+                                <button class="btn-comprar" onclick="adicionarAoCarrinho('Ingresso para Evento')">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <h3 class="section-header">Livros</h3>
+<div class="flex">
+    <div class="produto-container">
+        <img src="imgs/img OP - livro 1-250px.webp" alt="Livro ONE PIECE" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">ONE PIECE</h3>
+            <p class="produto-desc">Echiro Oda</p>
+            <span class="produto-preco">R$30,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Livro ONE PIECE')">Comprar</button>
         </div>
-    </main>
-    <footer>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/novaFotoSenhorAneis.jpg" alt="Livro SENHOR DOS ANEIS" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">SENHOR DOS ANEIS</h3>
+            <p class="produto-desc">J.R.R. Tolkien</p>
+            <span class="produto-preco">R$45,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Livro SENHOR DOS ANEIS')">Comprar</button>
+        </div>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/FotoLivroHarryPotter.webp" alt="Livro HARRY POTTER" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">HARRY POTTER</h3>
+            <p class="produto-desc">J.K. Rowling</p>
+            <span class="produto-preco">R$50,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Livro HARRY POTTER')">Comprar</button>
+        </div>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/livroPaiRico-250px.jpg" alt="Livro PAI RICO PAI POBRE" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">PAI RICO PAI POBRE</h3>
+            <p class="produto-desc">Robert T. Kiyosaki</p>
+            <span class="produto-preco">R$35,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Livro PAI RICO PAI POBRE')">Comprar</button>
+        </div>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/InvestidorinteligenteLIVRO-250px.jpg" alt="Livro O INVESTIDOR INTELIGENTE" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">O INVESTIDOR INTELIGENTE</h3>
+            <p class="produto-desc">Benjamin Graham</p>
+            <span class="produto-preco">R$40,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Livro O INVESTIDOR INTELIGENTE')">Comprar</button>
+        </div>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/AÇÕES COMUNS LIVRO-250PX.jpg" alt="Livro AÇÕES COMUNS, LUCROS EXTRAORDINÁRIOS" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">AÇÕES COMUNS, LUCROS EXTRAORDINÁRIOS</h3>
+            <p class="produto-desc">Philip Fisher</p>
+            <span class="produto-preco">R$45,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Livro AÇÕES COMUNS, LUCROS EXTRAORDINÁRIOS')">Comprar</button>
+        </div>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/A estrutura da Revolução cientifica-250px.jpg" alt="A Estrutura das Revoluções Científicas" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">A Estrutura das Revoluções Científicas</h3>
+            <p class="produto-desc">Thomas S. Kuhn</p>
+            <span class="produto-preco">R$55,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('A Estrutura das Revoluções Científicas')">Comprar</button>
+        </div>
+    </div>
+    <div class="produto-container">
+        <img src="imgs/Como a mente funciona-250px.jpg" alt="Como a Mente Funciona" class="produto-img">
+        <div class="produto-info">
+            <h3 class="produto-titulo">Como a Mente Funciona</h3>
+            <p class="produto-desc">Steven Pinker</p>
+            <span class="produto-preco">R$60,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Como a Mente Funciona')">Comprar</button>
+            </div>
+            </div>
+            <div class="produto-container">
+            <img src="imgs/os limites da interpretacao -250 px.jpg" alt="Os Limites da Interpretação" class="produto-img">
+            <div class="produto-info">
+            <h3 class="produto-titulo">Os Limites da Interpretação</h3>
+            <p class="produto-desc">Umberto Eco</p>
+            <span class="produto-preco">R$50,00</span>
+            <button class="btn-comprar" onclick="adicionarAoCarrinho('Os Limites da Interpretação')">Comprar</button>
+                </div>
+                    </div>
+                        </div>
+                        
+             </div>
+                     </div>
+                </main>
+
+        <footer>
         <div class="container">
             <div class="row py-5 align-items-center">
                 <div class="col-md-4 d-flex align-items-center">
@@ -239,4 +337,5 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
-</html>
+</html>  
+                
